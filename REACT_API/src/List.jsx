@@ -1,30 +1,38 @@
 import { useEffect } from "react"
 import { useState } from "react"
+import './index.css'
 
 export default function List() {
 
-    const [dataAff, setDataAff] = useState([])
+    const [dataAff, setDataAff] = useState()
 
     useEffect(() => {
 
         fetch("http://localhost:3000")
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            setDataAff(data)})
-            // let data = {'nom': nom, 'prenom': prenom, 'age': age}
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                setDataAff(data)
+            });
     }
-    , [])
-    
-    return(
-    <>
-    {dataAff && dataAff.map((data, index) => {
-        <div key={index}>
-            <h1>{data.nom}</h1>
-            <h2>{data.prenom}</h2>
-            <h3>{data.age}</h3>
-        </div>
-    })}
-    </>
+        , [])
+
+    return (
+        <>
+            <div id="cont">
+                <div>
+                    {dataAff && dataAff.map((data, index) => <p id={index}>Personne {index}</p>)}
+                </div>
+                <div>
+                    {dataAff && dataAff.map((data, index) => <p>{data.nom}</p>)}
+                </div>
+                <div>
+                    {dataAff && dataAff.map((data, index) => <p>{data.prenom}</p>)}
+                </div>
+                <div>
+                    {dataAff && dataAff.map((data, index) => <p>{data.age}</p>)}
+                </div>
+            </div>
+        </>
     )
-    }
+}
