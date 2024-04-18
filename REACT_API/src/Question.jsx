@@ -8,7 +8,6 @@ function App() {
     age: "",
   })
  
- 
   const sendInfo = (e) => {
     e.preventDefault();
     fetch("http://localhost:3000/Question", {
