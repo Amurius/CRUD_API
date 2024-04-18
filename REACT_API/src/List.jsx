@@ -18,15 +18,19 @@ export default function List() {
         <>
             <div id="cont">
                 <div>
+                <h3>Numéro de la personne</h3>
                     {dataAff && dataAff.map((data, index) => <p className={index}>Personne {index}</p>)}
                 </div>
                 <div>
+                <h3>Noms</h3>
                     {dataAff && dataAff.map((data, index) => <p className={index}>{data.nom}</p>)}
                 </div>
                 <div>
+                <h3>Prénoms</h3>
                     {dataAff && dataAff.map((data, index) => <p className={index}>{data.prenom}</p>)}
                 </div>
                 <div>
+                <h3>Ages</h3>
                     {dataAff && dataAff.map((data, index) => <p className={index}>{data.age}</p>)}
                 </div>
             </div>
