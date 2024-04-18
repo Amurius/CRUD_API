@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Question from './Question.jsx'
+import Ajout from './Ajout.jsx'
 import Navigation from './Navigation.jsx'
 import { Route, Routes} from 'react-router-dom'
 import List from './List.jsx'
@@ -11,9 +11,9 @@ function App() {
     <>
     <Navigation/>
     <Routes>
-      <Route path="/Question" element={<Question/>}/>
+      <Route path="/Ajout" element={<Ajout/>}/>
+      <Route path="/List" element={<List/>}/>
     </Routes>
-    <List/>
     </>
   )
 }

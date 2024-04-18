@@ -4,8 +4,8 @@ export default function Navigation() {
 
 return(
 <>
-<Link to="/">Accueil</Link>
-<Link to="/Question">Ajouter</Link>
+<Link to="/List">Accueil</Link>
+<Link to="/Ajout">Ajouter</Link>
 </>
 )
 }
