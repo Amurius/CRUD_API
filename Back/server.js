@@ -12,12 +12,15 @@ app.get('/', (req, res) => {
 })
 
 app.post('/Ajout', (req, res) => {
-  const celebrite =
-    {nom: req.body.nom,  prenom: req.body.prenom, age: req.body.age};
-  let zob = celebrites
-  zob.push(celebrite)
-  console.log(zob)
-  fs.writeFileSync('./celebrities.json', JSON.stringify(zob,null,2))
+  const {nom, prenom, age} = req.body;
+  celebrites.push({nom, prenom, age});
+  fs.writeFileSync('./celebrities.json', JSON.stringify(zob,null,2), (error) => {
+    if (error) {
+      res.status(500).send(error.message)
+    } else {
+      res.status(200).send("Ajout réussi !")
+    }
+  })
 })
 
 app.listen(3000, () => {

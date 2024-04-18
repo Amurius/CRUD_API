@@ -12,7 +12,7 @@ export default function List() {
                 console.log(data);
                 setDataAff(data)
             });
-    }, [])
+    }, []);
 
     return (
         <>
