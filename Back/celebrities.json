@@ -27,6 +27,16 @@
   {
     "nom": "Birolini",
     "prenom": "Allan",
-    "age": "22"
+    "age": 22
+  },
+  {
+    "nom": "Darwin",
+    "prenom": "BIRO",
+    "age": "20"
+  },
+  {
+    "nom": "Darwin",
+    "prenom": "BIRO",
+    "age": "20"
   }
 ]

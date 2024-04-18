@@ -1,4 +1,15 @@
 #cont{
   display:grid; 
-  grid-template-columns:repeat(4,auto)
+  grid-template-columns:repeat(4,auto);
+  padding-top: 4rem;
+}
+
+.lien{
+  color: black;
+  font-size: 24px;
+  padding: 3rem;
+}
+
+form{
+  padding-top: 4rem;
 }

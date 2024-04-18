@@ -5,7 +5,7 @@ function App() {
   const [formulaire, setFormulaire] = useState({
     nom: "",
     prenom: "",
-    age: "",
+    age: null,
   })
 
   const setValue = (e) => {
@@ -23,13 +23,14 @@ function App() {
       headers: { 'Content-type': 'application/json'},
       body: JSON.stringify(formulaire)
     }).then(response => response.json()).then(data => console.log(data));
+    alert("Ajout réussi ! ")
   };
   return (
     <>
       <form onSubmit={sendInfo}>
-        <input type="text" name="nom" onChange={setValue} ></input>
-        <input type="text" name="prenom" onChange={setValue} ></input>
-        <input type="text" name="age" onChange={setValue} ></input>
+        <input type="text" name="nom" onChange={setValue} placeholder='Nom'></input>
+        <input type="text" name="prenom" onChange={setValue} placeholder='Prénom'></input>
+        <input type="number" name="age" onChange={setValue} placeholder='Age'></input>
         <input type="submit" value="submit" />
       </form>
     </>
