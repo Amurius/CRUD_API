@@ -12,13 +12,13 @@ app.get('/', (req, res) => {
 })
 
 app.post('/Ajout', (req, res) => {
-  const {nom, prenom, age} = req.body;
-  celebrites.push({nom, prenom, age});
-  fs.writeFileSync('./celebrities.json', JSON.stringify(zob,null,2), (error) => {
-    if (error) {
-      res.status(500).send(error.message)
+  const { nom, prenom, age } = req.body;
+  celebrites.push({ nom, prenom, age });
+  fs.writeFile('./celebrities.json', JSON.stringify(celebrites), (err) => {
+    if (err) {
+      res.status(500).send("Erreur lors de l'ajout")
     } else {
-      res.status(200).send("Ajout réussi !")
+      res.status(200).send("Ajout réussi")
     }
   })
 })
