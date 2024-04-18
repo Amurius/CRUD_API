@@ -4,7 +4,7 @@ export default function Navigation() {
 
 return(
 <>
-<Link to="/List">Accueil</Link>
+<Link to="/List">Liste</Link>
 <Link to="/Ajout">Ajouter</Link>
 </>
 )
